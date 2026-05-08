@@ -10,6 +10,7 @@ type User = {
   email: string;
   password?: string; // o ? deixa o preenchimento opcional
   orders: Order[];
+  register(): string;
 };
 
 const user: User = {
@@ -17,8 +18,11 @@ const user: User = {
   age: 20,
   email: "luiz@email.com",
   orders: [{productId: "1", price: 200}],
+  register() {
+    return "Regitro"
+  },
 };
-
+7
 //  Unions
 type Author = {
   books: string[];
@@ -29,7 +33,10 @@ const author: Author & User = {
   age: 300,
   email: "tolkien@email.com",
   orders: [],
-  books: ["O Senhor dos Anéis", "O Hobbit"]
+  books: ["O Senhor dos Anéis", "O Hobbit"],
+   register() {
+     return "Registro"
+   },
 }
 
 // Interfaces
